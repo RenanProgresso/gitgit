@@ -1,0 +1,58 @@
+Roteador 1
+en
+conf t
+router ospf 1
+router-id 1.1.1.1
+log-adjacency-changes
+network 10.90.50.0 0.0.0.255 area 1
+network 192.168.1.0 0.0.0.31 area 1
+network 192.168.1.128 0.0.0.31 area 0
+do wr
+
+
+Roteador 2
+en
+conf t
+router ospf 1
+router-id 2.2.2.2
+log-adjacency-changes
+network 10.90.51.0 0.0.0.255 area 2
+network 192.168.1.32 0.0.0.31 area 2
+network 192.168.1.160 0.0.0.31 area 0
+do wr
+
+
+
+Roteador 3
+en
+conf t
+router ospf 1
+router-id 3.3.3.3
+network 10.90.52.0 0.0.0.255 area 3
+network 192.168.1.64 0.0.0.31 area 3
+network 192.168.1.192 0.0.0.31 area 0
+do wr
+
+
+
+Roteador 4
+en
+conf t
+router ospf 1
+router-id 4.4.4.4
+network 10.90.53.0 0.0.0.255 area 4
+network 192.168.1.96 0.0.0.31 area 4
+network 192.168.1.224 0.0.0.31 area 0
+do wr
+
+
+Roteador 5
+en
+conf t
+router ospf 1
+router-id 5.5.5.5
+network 192.168.1.128 0.0.0.31 area 0
+network 192.168.1.160 0.0.0.31 area 0
+network 192.168.1.192 0.0.0.31 area 0
+network 192.168.1.224 0.0.0.31 area 0
+do wr
